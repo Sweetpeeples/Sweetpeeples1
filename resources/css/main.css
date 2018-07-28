@@ -106,6 +106,7 @@ header .layout-wide {
     color: var(--alternative-text-color);
     font-size: var(--font-size-site-title);
     text-align: right;
+    font-family: var(--font-heading);
 
 }
 /*-------------- NAVIGATION */
@@ -114,9 +115,59 @@ header .layout-wide {
 footer {
     background-color: var(--alternative-bg-color);
 }
+
+.footer-subscribe {
+    background-color: var(--secondary-bg-color);
+    padding: var(--spacer-large) 0;
+    text-align: center;
 }
+.footer-notices {
+    padding: var(--spacer) 0;
+}
+
+.copyright {
+    color: #fff;
+}
+.footer-notices .layout-wide {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
 /*-------------- FORMS */
 
+/* subscription form */
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px; 
+    width: 480px;
+    max-width: 100%;
+    margin-bottom: var(--spacer);
+}
+
+.button {
+    background-color: var(--alternative-bg-color);
+    color: var(--alternative-text-color);
+    padding: var(--spacer);
+    min-width: 200px;
+
+    border-radius: 30px;
+    text-transform: uppercase;
+
+    transition: var(--transition-time);
+}
+
+.button:hover {
+    background-color: var(--strong-text-color);
+}
 /*-------------- MODULES */
 
 
