@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Raleway');
+
 /*-------------- VARIABLES */
 
 :root {
@@ -48,7 +50,7 @@
 }
 
 body {
-    font-family: arial, sans-serif;
+    font-family: var(--font-default);
     line-height: 1.8; 
     font-size: 18px;
     color: var(--main-text-color);
@@ -62,7 +64,37 @@ iframe {
  }    
 
  /*-------------- HEADINGS AND TYPE */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-heading);
+    color: var(--strong-text-color);
+    font-weight: normal;
+}
 
+h1 {
+    font-size: var(--font-size-page-title);
+    letter-spacing: 0.6px;
+}
+
+h2 {
+    font-size: var(--font-size-section-title);
+
+}
+
+h3 {
+    font-size: var(--font-size-sub-title)
+}
+
+a {
+    color: var(--error-color);
+    }
+
+a:hover {
+    color: var(--strong-text-color);
+}
 /*-------------- LAYOUTS */
 
 .layout-full-width,
