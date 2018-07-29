@@ -42,6 +42,14 @@
     --font-size-heading-small: 16px;
   }
 
+  @media screen and (min-width: 800px) {
+      :root {
+          --font-size-site-title: 54px;
+          --font-size-page-title: 80px;
+          --font-size-section-title: 48px;
+      }
+  }
+
 /*-------------- GLOBAL DEFAULTS */
 
 * {
@@ -129,7 +137,6 @@ header .layout-wide {
 .logo-wrapper {
     float: left;
     width: 20%;
-
 }
 
 .site-title {
@@ -139,10 +146,85 @@ header .layout-wide {
     font-size: var(--font-size-site-title);
     text-align: right;
     font-family: var(--font-heading);
-
 }
 /*-------------- NAVIGATION */
 
+.navigation {
+    background-color: var(--alternative-bg-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-prompt {
+    width: 100%;
+    background-color: var(--alternative-bg-color);
+    color: var(--alternative-text-color);
+    padding: var(--padder) 0;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.nav-inner {
+    margin-bottom: 0;
+}
+
+.nav-inner ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-inner li {
+    text-align: center;
+}
+
+.nav-inner a {
+    display: block;
+    color: var(--alternative-text-color);
+    padding: var(--spacer) 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-inner a:hover {
+    color: var(--error-color);
+}
+
+@media screen and (min-width: 800px) {
+    .nav-prompt {
+        display: none;
+    }
+    .navigation {
+        padding: var(--padder) 0;
+    }
+
+    .nav-inner ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-inner a{
+        border-bottom: 2px solid transparent;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-inner {
+        transition: var(--transition-time);
+        overflow: hidden;    
+    }
+
+    .nav-inner[aria-expanded="false"] {
+        max-height: 0;
+    }
+
+    .nav-inner[aria-expanded="true"] {
+        max-height: 100vh;
+    }
+}
 /*-------------- FOOTER */
 footer {
     background-color: var(--alternative-bg-color);
