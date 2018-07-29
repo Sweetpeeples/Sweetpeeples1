@@ -12,3 +12,15 @@ $('.nav-prompt').click(function() {
     }
 
 });
+
+// image gallery - only if an image gallery is present do we want something to happen
+
+function imageGallery() {
+    if (!$('.image-gallery').length) {
+        return
+    }
+
+    $('.image-gallery a').simpleLightbox();
+}
+
+imageGallery();
